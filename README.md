@@ -1,4 +1,4 @@
-# this is a form from https://github.com/dickeyxxx/ng-modules
+This is a form from https://github.com/dickeyxxx/ng-modules
 
 install live-server as global and other dev dependencies
 
