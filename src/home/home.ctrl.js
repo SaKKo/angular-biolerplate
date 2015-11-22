@@ -1,4 +1,5 @@
 angular.module('app')
-.controller('HomeCtrl', ['$scope', function ($scope) {
+.controller('HomeCtrl', ['$scope','$window', function ($scope,$window) {
   var self = this;
+  $window.document.title = "Home"
 }])
