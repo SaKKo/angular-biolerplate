@@ -9,7 +9,7 @@ start development by
 
     # terminal 1
     live-server
-    # terminal 2 (this will auto generate app.js which could be slow for big proj)
+    # terminal 2 (this will auto generate app.js, templateCache, css on change, which could be slow for big proj)
     gulp watch
 
     # to manually combine files run these commands
