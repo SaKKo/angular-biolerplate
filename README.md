@@ -3,7 +3,10 @@ This is a form from https://github.com/dickeyxxx/ng-modules
 install live-server as global and other dev dependencies
 
     npm install live-server -g
+    npm install bower -g
+    npm install gulp -g
     npm install
+    bower install
 
 start development by
 
