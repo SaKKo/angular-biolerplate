@@ -6,9 +6,9 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
     }).when('/about', {
       templateUrl: 'src/about/about.template.html',
       controller: 'AboutCtrl'
-    }).when('/github', {
-      templateUrl: 'src/github/github.template.html',
-      controller: 'GithubCtrl'
+    }).when('/users', {
+      templateUrl: 'src/users/users.template.html',
+      controller: 'UsersCtrl'
     })
     .otherwise({redirectTo:'/home'});
 });
