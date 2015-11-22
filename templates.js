@@ -1,4 +1,4 @@
 angular.module("app").run(["$templateCache", function($templateCache) {$templateCache.put("src/about/about.template.html","<h1>About</h1>\n");
-$templateCache.put("src/home/home.template.html","<h1>Home</h1>\n");
+$templateCache.put("src/home/home.template.html","<h1 class=\'page-header\'>Home</h1>\n");
 $templateCache.put("src/sidebar/sidebar.template.html","<md-button class=\"md-accent\" ng-click=\"applicationCtrl.toggleSidenav(\'left\')\" href=\"#home\">Home</md-button>\n<md-button class=\"md-accent\" ng-click=\"applicationCtrl.toggleSidenav(\'left\')\" href=\"#about\">about</md-button>\n<md-button class=\"md-accent\" ng-click=\"applicationCtrl.toggleSidenav(\'left\')\" href=\"#users\">Users</md-button>\n");
 $templateCache.put("src/users/users.template.html","<h1>Users Faker</h1>\n<ul>\n  <li ng-repeat=\'user in users\'>\n    {{user.name}}\n  </li>\n</ul>\n");}]);

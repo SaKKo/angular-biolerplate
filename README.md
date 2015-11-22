@@ -16,3 +16,14 @@ start development by
     gulp js
     gulp sass
     gulp templates
+
+test
+
+    # preparation
+    npm install -g protractor
+    npm install -g webdriver-manager
+    webdriver-manager update
+    webdriver-manager start
+
+    # run
+    protractor protractor/conf.js
