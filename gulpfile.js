@@ -3,7 +3,7 @@ var concat = require('gulp-concat')
 var sourcemaps = require('gulp-sourcemaps')
 var uglify = require('gulp-uglify')
 var ngAnnotate = require('gulp-ng-annotate')
-var minifyCss = require('gulp-minify-css');
+var sass = require('gulp-sass');
 var templateCache = require('gulp-angular-templatecache');
 
 gulp.task('js', function() {
@@ -16,11 +16,10 @@ gulp.task('js', function() {
     .pipe(gulp.dest('.'))
 })
 
-gulp.task('css', function() {
-  gulp.src(['assets/**/main.css', 'assets/**/*.css'])
-    .pipe(minifyCss({
-      compatibility: 'ie8'
-    }))
+gulp.task('sass', function() {
+  gulp.src(['assets/**/main.scss', 'assets/**/*.scss'])
+    .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+    .pipe(concat('main.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('.'))
 })
@@ -34,8 +33,8 @@ gulp.task('templates', function() {
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('watch', ['js', 'css', 'templates'], function() {
+gulp.task('watch', ['js', 'sass', 'templates'], function() {
   gulp.watch('src/**/*.js', ['js'])
-  gulp.watch('assets/**/*.css', ['css'])
   gulp.watch('src/**/*.template.html', ['templates'])
+  gulp.watch('assets/**/*.scss', ['sass'])
 })
