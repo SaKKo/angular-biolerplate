@@ -1,0 +1,4 @@
+angular.module("app").run(["$templateCache", function($templateCache) {$templateCache.put("src/about/about.template.html","<h1>About</h1>\n");
+$templateCache.put("src/github/github.template.html","<h1>Github Users</h1>\n<ul>\n  <li ng-repeat=\'user in users\'>\n    <a href=\'https://github.com/{{user.login}}\'>\n      {{user.login}}\n    </a>\n  </li>\n</ul>\n");
+$templateCache.put("src/home/home.template.html","<h1>Home</h1>\n");
+$templateCache.put("src/sidebar/sidebar.template.html","<md-button class=\"md-accent\" ng-click=\"applicationCtrl.toggleSidenav(\'left\')\" href=\"#home\">Home</md-button>\n<md-button class=\"md-accent\" ng-click=\"applicationCtrl.toggleSidenav(\'left\')\" href=\"#about\">about</md-button>\n<md-button class=\"md-accent\" ng-click=\"applicationCtrl.toggleSidenav(\'left\')\" href=\"#github\">Github</md-button>\n");}]);

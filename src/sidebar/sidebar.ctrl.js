@@ -1,8 +1,8 @@
 angular.module('app').controller('SidebarCtrl', ['$scope', function($scope) {
-  
+
 }])
-.directive('mySidebar', function() {
+.directive('sidebar', function() {
   return {
-    templateUrl: 'src/sidebar/sidebar.html'
+    templateUrl: 'src/sidebar/sidebar.template.html'
   };
 });
