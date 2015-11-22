@@ -21,6 +21,7 @@ test
 
     # preparation
     npm install -g protractor
+    npm install protractor-jasmine2-screenshot-reporter --save-dev
     npm install -g webdriver-manager
     webdriver-manager update
     webdriver-manager start
