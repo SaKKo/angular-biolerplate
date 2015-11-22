@@ -11,3 +11,8 @@ start development by
     live-server
     # terminal 2 (this will auto generate app.js which could be slow for big proj)
     gulp watch
+
+    # to manually combine files run these commands
+    gulp js
+    gulp css
+    gulp templates
