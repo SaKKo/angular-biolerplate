@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1" />
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.js"></script>
+
   <title></title>
   <link rel="stylesheet" href="main.css">
 </head>
-<body layout="column" ng-controller='SidebarCtrl as sidebarCtrl'>
+<body layout="column" ng-controller='ApplicationCtrl as applicationCtrl'>
   <md-toolbar layout="row" class="md-short">
     <div class="md-toolbar-tools">
-      <md-button ng-click="sidebarCtrl.toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+      <md-button ng-click="applicationCtrl.toggleSidenav('left')" hide-gt-sm class="md-icon-button">
         <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg">
         </md-icon>
       </md-button>
@@ -19,9 +26,9 @@
   </md-toolbar>
   <div layout="row" flex>
     <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-      <md-button class="md-accent" ng-click="sidebarCtrl.toggleSidenav('left')" href="#home">Home</md-button>
-      <md-button class="md-accent" ng-click="sidebarCtrl.toggleSidenav('left')" href="#about">about</md-button>
-      <md-button class="md-accent" ng-click="sidebarCtrl.toggleSidenav('left')" href="#github">Github</md-button>
+      <md-button class="md-accent" ng-click="applicationCtrl.toggleSidenav('left')" href="#home">Home</md-button>
+      <md-button class="md-accent" ng-click="applicationCtrl.toggleSidenav('left')" href="#about">about</md-button>
+      <md-button class="md-accent" ng-click="applicationCtrl.toggleSidenav('left')" href="#github">Github</md-button>
     </md-sidenav>
     <div layout="column" flex id="content">
       <md-content layout="column" flex class="md-padding">
@@ -29,11 +36,6 @@
       </md-content>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
