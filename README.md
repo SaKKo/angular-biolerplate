@@ -14,5 +14,5 @@ start development by
 
     # to manually combine files run these commands
     gulp js
-    gulp css
+    gulp sass
     gulp templates
